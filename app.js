@@ -22,7 +22,7 @@ toggleBar()
 
 //  SCROLL FUNCTION
 
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll", function ()  => {
     let scrollHeader = document.querySelector(".header__content")
     scrollHeader.classList.toggle('sticky-header', window.scrollY > 0)
 })
@@ -66,25 +66,25 @@ function slider() {
 //      FOOTER ACCORDION
 
 
-const accordionHeaders = document.querySelectorAll('.footer__item--header');
+// const accordionHeaders = document.querySelectorAll('.footer__item--header');
 
-accordionHeaders.forEach(accordionHeader => {
-    accordionHeader.addEventListener('click', e => {
-        accordionHeader.classList.toggle('active')
-        const accordionActive = document.querySelector('.footer__item--header.active')
-        if (accordionActive && accordionActive !== accordionHeader) {
-            accordionActive.classList.toggle('active');
-            accordionActive.nextElementSibling.style.maxHeight = '0';
-        }
+// accordionHeaders.forEach(accordionHeader => {
+//     accordionHeader.addEventListener('click', e => {
+//         accordionHeader.classList.toggle('active')
+//         const accordionActive = document.querySelector('.footer__item--header.active')
+//         if (accordionActive && accordionActive !== accordionHeader) {
+//             accordionActive.classList.toggle('active');
+//             accordionActive.nextElementSibling.style.maxHeight = '0';
+//         }
 
-        const accordionContents = accordionHeader.nextElementSibling;
-        if (accordionHeader.classList.contains('active')) {
-            accordionContents.style.maxHeight = accordionContents.scrollHeight + 'px';
-        }
-        else {
-            accordionContents.style.maxHeight = '0';
-        }
-    })
-})
+//         const accordionContents = accordionHeader.nextElementSibling;
+//         if (accordionHeader.classList.contains('active')) {
+//             accordionContents.style.maxHeight = accordionContents.scrollHeight + 'px';
+//         }
+//         else {
+//             accordionContents.style.maxHeight = '0';
+//         }
+//     })
+// })
 
 
