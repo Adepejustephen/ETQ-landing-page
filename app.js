@@ -1,10 +1,3 @@
-//  SCROLL FUNCTION
-
-
-window.addEventListener("scroll", function ()  => {
-    let scrollHeader = document.querySelector(".header__content")
-    scrollHeader.classList.toggle('sticky-header', window.scrollY > 0)
-})
 
 //  TOGGLE NAVBAR
 const toggleBar = () => {
@@ -29,13 +22,22 @@ const toggleBar = () => {
 
 toggleBar()
 
-function slider() {
-    const slider = document.querySelector('.productSlide');
-    let sliderWidth = slider.offsetWidth / 3;
-    let listEl = document.querySelector('.productSlide__content');
-    let btnLeftEl = document.querySelector('#prev');
-    let btnRightEl = document.querySelector('#next');
-    let count = 1;
+//   SCROLL FUNCTION
+
+window.addEventListener("scroll", () => {
+    let scrollHeader = document.querySelector(".header__content")
+    scrollHeader.classList.toggle('sticky-header', window.scrollY > 0)
+})
+
+
+
+// function slider() {
+//     const slider = document.querySelector('.productSlide');
+//     let sliderWidth = slider.offsetWidth / 3;
+//     let listEl = document.querySelector('.productSlide__content');
+//     let btnLeftEl = document.querySelector('#prev');
+//     let btnRightEl = document.querySelector('#next');
+//     let count = 1;
 
 //     function slideImages(dir) {
 //         let totalChildren = listEl.querySelectorAll(".productSlide__item").length;
@@ -63,28 +65,5 @@ function slider() {
 // };
 // slider()
 
-//      FOOTER ACCORDION
-
-
-const accordionHeaders = document.querySelectorAll('.footer__item--header');
-
-accordionHeaders.forEach(accordionHeader => {
-    accordionHeader.addEventListener('click', e => {
-        accordionHeader.classList.toggle('active')
-        const accordionActive = document.querySelector('.footer__item--header.active')
-        if (accordionActive && accordionActive !== accordionHeader) {
-            accordionActive.classList.toggle('active');
-            accordionActive.nextElementSibling.style.maxHeight = '0';
-        }
-
-        const accordionContents = accordionHeader.nextElementSibling;
-        if (accordionHeader.classList.contains('active')) {
-            accordionContents.style.maxHeight = accordionContents.scrollHeight + 'px';
-        }
-        else {
-            accordionContents.style.maxHeight = '0';
-        }
-    })
-})
 
 
