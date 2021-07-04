@@ -37,31 +37,31 @@ function slider() {
     let btnRightEl = document.querySelector('#next');
     let count = 1;
 
-    function slideImages(dir) {
-        let totalChildren = listEl.querySelectorAll(".productSlide__item").length;
+//     function slideImages(dir) {
+//         let totalChildren = listEl.querySelectorAll(".productSlide__item").length;
         
-        window.addEventListener('resize', function () {
-        sliderWidth = slider.offsetWidth;
-    });
+//         window.addEventListener('resize', function () {
+//         sliderWidth = slider.offsetWidth;
+//     });
 
-        dir === "left" ? ++count : --count;
-        listEl.style.left = count * sliderWidth + 'px';
-        btnLeftEl.style.display = count < 0 ? "block" : "none";
-        btnRightEl.style.display = count > 4 - totalChildren ? "block" : "none";
-    }
+//         dir === "left" ? ++count : --count;
+//         listEl.style.left = count * sliderWidth + 'px';
+//         btnLeftEl.style.display = count < 0 ? "block" : "none";
+//         btnRightEl.style.display = count > 4 - totalChildren ? "block" : "none";
+//     }
 
-    btnLeftEl.addEventListener("click", function (e) {
-        slideImages("left");
-
-
-    });
-    btnRightEl.addEventListener("click", function (e) {
-        slideImages("right");
-    });
+//     btnLeftEl.addEventListener("click", function (e) {
+//         slideImages("left");
 
 
-};
-slider()
+//     });
+//     btnRightEl.addEventListener("click", function (e) {
+//         slideImages("right");
+//     });
+
+
+// };
+// slider()
 
 //      FOOTER ACCORDION
 
